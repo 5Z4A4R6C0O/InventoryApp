@@ -1,0 +1,9 @@
+{
+    "mapa_sinonimos": {
+        "sku": ["sku", "codigo", "cod", "id_comercial", "referencia", "ref"],
+        "nombre": ["nombre", "producto", "articulo", "item", "descripcion", "name"],
+        "stock_actual": ["stock actual", "cantidad", "stock", "existencia", "qty", "unidades"],
+        "stock_minimo": ["stock minimo", "minimo", "alerta stock", "min", "limit"],
+        "costo_unitario_base": ["costo base", "costo", "precio compra", "cost", "costo unitario", "valor"]
+    }
+}
