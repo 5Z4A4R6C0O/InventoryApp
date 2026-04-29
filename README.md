@@ -26,9 +26,5 @@ Categorización Automática: El mayor reto fue diseñar una estructura que permi
 
 Modularidad: Se logró separar completamente la lógica del backend (cálculos y gestión de archivos) de la interfaz visual, permitiendo que en un futuro se pueda migrar a una interfaz web sin reescribir la lógica base.
 
-Nota sobre el Código Fuente
-
-Para proteger la propiedad intelectual del desarrollo, este repositorio es privado. Si usted es un reclutador o técnico interesado en revisar la calidad del código, la arquitectura de clases o realizar una prueba técnica, por favor solicite acceso o una demostración en vivo.
-
 Desarrollado por Carlos Urbáez
 Estudiante de Ingeniería de Sistemas | Python Developer
