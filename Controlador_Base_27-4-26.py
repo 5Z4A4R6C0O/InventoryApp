@@ -1,5 +1,5 @@
 import sys
-# Importamos las funciones de tus otros archivos si los separaste
+
 from gestion_inventario import añadir_producto_nuevo, retirar_producto
 from verificacion_inventario import mostrar_inventario
 from registrar_compra import registrar_compra
@@ -11,7 +11,7 @@ from import_data_csv import importar_desde_csv_flexible #para importar data de i
 from valorizacion import reporte_valorizacion
 
 def menu_principal():
-    # Al iniciar el controlador base, verificamos alertas de stock bajo.
+   
 
     while True:
         mostrar_alertas_stock_bajo()
