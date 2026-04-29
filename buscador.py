@@ -7,7 +7,7 @@ def buscar_producto_inteligente():
     print("\n--- BUSCADOR INTELIGENTE DE PRODUCTOS ---")
     termino = input("Ingrese nombre o SKU a buscar: ").upper()
 
-    # Usamos LIKE con % para búsqueda parcial
+    
     query = """
         SELECT id_producto, sku, nombre, stock_actual, costo_unitario_base 
         FROM productos 
@@ -25,7 +25,7 @@ def buscar_producto_inteligente():
         for p in resultados:
             print(f"{p[0]:<4} | {p[1]:<10} | {p[2]:<22} | {p[3]:<8}")
         
-        # Opcional: Ver historial del primer resultado si solo hay uno o si el usuario elige
+       
         if len(resultados) == 1:
             ver_historial = input("\n¿Desea ver los últimos 5 movimientos de este producto? (s/n): ").lower()
             if ver_historial == 's':
@@ -37,7 +37,6 @@ def mostrar_historial_reciente(id_prod):
     conn = sqlite3.connect("inventario.db")
     cursor = conn.cursor()
     
-    # Usamos 'localtime' para que SQLite convierta UTC a tu hora local
     cursor.execute("""
         SELECT tipo, cantidad, datetime(fecha, 'localtime') 
         FROM movimientos 
@@ -49,7 +48,6 @@ def mostrar_historial_reciente(id_prod):
     movs = cursor.fetchall()
     print("\n--- ÚLTIMOS 5 MOVIMIENTOS (Hora Local) ---")
     for m in movs:
-        # m[2] ahora tendrá la fecha corregida
         print(f"[{m[2]}] {m[0]}: {m[1]} unidades")
     
     conn.close()
