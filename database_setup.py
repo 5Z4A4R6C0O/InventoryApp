@@ -1,11 +1,9 @@
 import sqlite3
 
 def inicializar_db():
-    # Esto crea el archivo físicamente en tu carpeta
     conn = sqlite3.connect("inventario.db")
     cursor = conn.cursor()
 
-    # Creamos las tablas con la estructura que diseñamos
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS productos (
         id_producto INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -56,7 +54,6 @@ def inicializar_db():
     )
     """)
 
-    # Metemos un par de productos para que tengas algo con qué probar
     try:
         cursor.execute("INSERT INTO productos (sku, nombre, stock_actual, costo_unitario_base) VALUES ('P001', 'Mouse Gamer', 20, 10.00)")
         cursor.execute("INSERT INTO productos (sku, nombre, stock_actual, costo_unitario_base) VALUES ('P002', 'Teclado', 10, 25.00)")
