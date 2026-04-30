@@ -54,7 +54,6 @@ def retirar_producto():
         cursor.execute("UPDATE productos SET stock_actual = stock_actual - ? WHERE id_producto = ?", (cantidad, id_prod))
 
         # 3. Registrar el movimiento (Salida)
-        # Nota: Si es venta, aquí podrías pedir el precio_venta_momento
         cursor.execute("""
             INSERT INTO movimientos (id_producto, tipo, cantidad, costo_momento)
             VALUES (?, 'SALIDA', ?, ?)
