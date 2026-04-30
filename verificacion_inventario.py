@@ -1,7 +1,6 @@
 import sqlite3
 
 def mostrar_inventario():
-    # Nos conectamos al archivo que acabas de crear
     conn = sqlite3.connect("inventario.db")
     cursor = conn.cursor()
 
